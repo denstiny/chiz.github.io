@@ -32,6 +32,7 @@
 
 
 	<style>
+
 		.img1 {
 			height: auto;
 			width: auto;
@@ -65,29 +66,35 @@
 			background-size: cover;
 			border-radius: 50%;
 			display: flex;
-			margin-top: 300px;
-			animation: myfirst 5s;
+			margin-top: 350px;
+			animation: myfirst 3s;
 			-webkit-animation: myfirst 5s infinite linear;
 
 		}
 
 		@keyframes myfirst {
 			0% {
-				transform: scale(1)
+				/*transform: scale(1)*/
+				margin-top: 350px;
 			}
 
 			25% {
-				transform: scale(1.1)
-					/*放大1.1倍*/
+				transform: scale(1.1);
+				/*放大1.1倍*/
+				margin-top: 300px;
 			}
 
 			50% {
-				transform: scale(1)
+				transform: scale(1);
 			}
 
-
 			75% {
-				transform: scale(1.1)
+				transform: scale(1.1);
+			}
+
+			100% {
+
+				transform: scale(1.1);
 			}
 		}
 
@@ -97,8 +104,8 @@
 			text-align: center;
 			font-size: 25px;
 			font-family: 'Times New Roman';
-			color: rgb(229, 233, 236, 0.5);
 			text-decoration: blink;
+			color: rgb(229, 233, 236, 0.5);
 			transition: all 1s;
 		}
 
@@ -128,40 +135,40 @@
 		}
 
 		.end {
+			float: left;
 			color: rgba(253, 249, 240, 0.5);
 			margin-top: 20px;
+			line-height: 5px;
 			margin-left: 20px;
-			width: 50px;
+			width: 30px;
 			height: 10px;
+			transition: all, 3s;
+		}
+
+		#en:hover {
+			transform: rotate(360deg);
+			color: red;
 		}
 	</style>
 </head>
 
 <body>
-	<div class="end">
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
-		<font>&curren;</font>
+	<div class="end" id="en">
+		<b>—</b>
+		<b>—</b>
+		<b>—</b>
 	</div>
 	<div class="head">
 		<div class="div1">
 		</div>
 		<div class="none">
-
 		</div>
 		<div class="font">
 			<a class="a1" href="http://wpa.qq.com/msgrd?v=3&uin=2254228017&site=qq&menu=yes">QQ </a>&nbsp;
 
-			<a class="a2" href="https://space.bilibili.com/449364077">bilibili</a>
+			<a class="a2" href="https://space.bilibili.com/449364077">
+				<font>bilibili</font>
+			</a>
 		</div>
 		<div class="lastDiv"><u>版权所有 By:迟早 江西先锋软件学院</u></div>
 
