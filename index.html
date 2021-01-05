@@ -3,6 +3,34 @@
 
 <head>
 	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		var paper = "人永远在追求快乐 ，永远在逃避痛苦 。";
+		var count = 1;
+		function oneByOne() {
+			var screen = paper.substr(0, count);
+			loopText.innerHTML = screen;
+			count++;
+			if (count > paper.length) {
+				count = 0;
+			}
+			setTimeout(oneByOne, 250);
+		}
+		onload = oneByOne;
+	</script>
+	<style type="text/css">
+		#test {
+			position: absolute;
+			right: 6em;
+			top: 1em;
+			width: 1px;
+			color: #ff0000;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+
+
 	<style>
 		.img1 {
 			height: auto;
@@ -10,7 +38,6 @@
 		}
 
 		body {
-			overflow-y: hidden;
 			/*去除滚动条*/
 			overflow-x: hidden;
 			width: 100%;
@@ -18,6 +45,16 @@
 			background-image: url('https://raw.githubusercontent.com/denstiny/chiz.github.io/gh-pages/src/ian-valerio-CAFq0pv9HjY-unsplash.jpg');
 			background-attachment: fixed;
 			background-size: cover;
+		}
+
+		.head {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: -17px;
+			bottom: 0;
+			overflow-x: hidden;
+			overflow-y: scroll;
 		}
 
 		.div1 {
@@ -83,15 +120,20 @@
 </head>
 
 <body>
-	<div class="div1">
-	</div>
-	<div class="font">
-		<a class="a1" href="http://wpa.qq.com/msgrd?v=3&uin=2254228017&site=qq&menu=yes">QQ : 2254228017</a> <br>
+	<div class="head">
+		<div class="div1">
+		</div>
+		<div class="font">
+			<a class="a1" href="http://wpa.qq.com/msgrd?v=3&uin=2254228017&site=qq&menu=yes">QQ : 2254228017</a> <br>
 
-		<a class="a2" href="https://space.bilibili.com/449364077">bilibili : <u>有点上头的薰衣草</u></a>
-	</div>
-	<div class="lastDiv">By:迟早 江西先锋软件学院</div>
+			<a class="a2" href="https://space.bilibili.com/449364077">bilibili : <u>有点上头的薰衣草</u></a>
+		</div>
+		<div class="lastDiv"><u>版权所有 By:迟早 江西先锋软件学院</u></div>
 
+	</div>
+	<div id="test">
+		<p id="loopText"></p>
+	</div>
 </body>
 
 </html>
